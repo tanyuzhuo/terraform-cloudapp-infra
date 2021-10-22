@@ -1,7 +1,7 @@
 # terraform-cloudapp-infra Repository 
 This repository contains scripts and the required Terraform files for setting up an example best-practice cloud web application infrastructure that involves AWS CloudFront, AWS S3 Bucket and AWS API Gateway. Specifically, it is designed to be used for [StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) on AWS. 
 
-An example usage of this repository is to provide a middle step cloud-native migration architecture during use cases like refactoring a monolithic application in to microservices on AWS. The architecture example blueprint can then be adjusted accordingly based on each individual use case during decoupling (such as updating API Gateway to adopt different resource path route to AWS Lambdas instead of the provisioned VPC link (e.g. NLB to monolithic backend EC2s).
+An example usage of this repository is to provide a middle step cloud-native migration architecture during use cases like refactoring a monolithic application in to microservices on AWS. The architecture example blueprint can then be adjusted accordingly based on each individual use case during decoupling. One further setup for example can involve updating the the AWS API Gateway to adopt different resource paths that can route to AWS Lambda as the backend service to replace the existing Monolithic EC2 servers.
 
 ![alt text](architecture.png "Architecture")
 
