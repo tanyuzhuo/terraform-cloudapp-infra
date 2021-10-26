@@ -1,7 +1,10 @@
 # terraform-cloudapp-infra Repository 
-This repository contains scripts and the required Terraform files for setting up an example best-practice cloud web application infrastructure that involves AWS CloudFront, AWS S3 Bucket and AWS API Gateway. Specifically, it is designed to be used for [StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) on AWS. 
+This repository contains scripts and the required Terraform code for setting up an example best-practice cloud web application infrastructure that involves AWS CloudFront, AWS S3 Bucket and AWS API Gateway. Specifically, it is designed to be used as a middle step migration reference for [StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) on AWS. 
 
-An example usage of this repository is to provide a middle step cloud-native migration architecture during use cases like refactoring a monolithic application in to microservices on AWS. The architecture example blueprint can then be adjusted accordingly based on each individual use case during decoupling. One further setup for example can involve updating the the AWS API Gateway to adopt different resource paths that can route to AWS Lambda as the backend service to replace the existing Monolithic EC2 servers.
+An example usage of this repository is to provide a middle step cloud-native migration architecture during use cases like refactoring a monolithic application in to microservices or instead just setting up an infrastructure stack for cloud web application on AWS. The architecture example blueprint can be adjusted accordingly based on each individual use case. Further setups for example can involve updating the the AWS API Gateway to adopt different resource paths that target AWS Lambda as the backend service to replace the existing Monolithic EC2 servers to achieve serverless migration.
+
+The repository and its relevant information with source code & examples are fully available on Github: https://github.com/tanyuzhuo/terraform-cloudapp-infra
+
 
 ![alt text](architecture.png "Architecture")
 
@@ -67,8 +70,8 @@ terraform destroy
 
 | Name | Source |
 |------|--------|
-| <a name="module_backend"></a> [backend](#module\_backend) | ../modules/apigw_vpclink |
-| <a name="module_frontend"></a> [frontend](#module\_frontend) | ../modules/cf_s3 |
+| <a name="module_backend"></a> [backend](#module\_backend) | ./modules/apigw_vpclink |
+| <a name="module_frontend"></a> [frontend](#module\_frontend) | ./modules/cf_s3 |
 
 ### Resources
 The following AWS Cloud resources will be provisioned into 2 different modules (frontend and backend infrasturcture stacks) and can be plugged into an existing codebase.:
