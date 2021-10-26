@@ -3,7 +3,7 @@ This repository contains scripts and the required Terraform code for setting up 
 
 An example usage of this repository is to provide a middle step cloud-native migration architecture during use cases like refactoring a monolithic application in to microservices or instead just setting up an infrastructure stack for cloud web application on AWS. The architecture example blueprint can be adjusted accordingly based on each individual use case. Further setups for example can involve updating the the AWS API Gateway to adopt different resource paths that target AWS Lambda as the backend service to replace the existing Monolithic EC2 servers to achieve serverless migration.
 
-The repository and its relevant information with source code & examples are fully available on Github: https://github.com/tanyuzhuo/terraform-cloudapp-infra
+The repository and its relevant information with source code & examples are fully available on [Github](https://github.com/tanyuzhuo/terraform-cloudapp-infra).
 
 
 ![alt text](architecture.png "Architecture")
